@@ -1,0 +1,8 @@
+hardware/ADV728X_video_capture-backups
+hardware/*.kicad_prl
+hardware/ADV728X_video_capture.round-tracks-config
+hardware/bom
+hardware/doc
+hardware/*.png
+hardware/gerber_to_order
+hardware/*.bak
