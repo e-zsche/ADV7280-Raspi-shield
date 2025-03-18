@@ -38,3 +38,65 @@ manufacturers may have different PCB dimensions, which in turn affects the trace
 CSI traces. Make sure to get this correct, otherwise the CSI connection may not work reliably.
 
 Until now the shield is running fine and I encountered no problems while running.
+
+# Software
+
+All connections this shield needs for running is the CSI connector to the raspberry pi's camera
+interface. Enabling the kernel module for this shield is done in the config.txt file:
+
+```
+[all]
+# enable adv7280
+dtoverlay=adv728x-m,adv7280m=1
+```
+
+Done! After booting you should get a ne video device.
+You can check this with v4l2-ctl command line utility.
+
+```
+$ v4l2-ctl --list-devices
+$ v4l2-ctl -D -d 0
+```
+
+## setting video standard
+
+Video standard is set to NTSC as default. Change it with this command
+```
+$ v4l2-ctl --set-standard pal
+$ v4l2-ctl --set-standard ntsc
+```
+
+## changing inputs
+
+Selecting video input source is not straight forward. This is not streamlined in the driver.
+Doing this is a little bit hacky, but it works.
+
+```
+$ sudo bash -c "echo 0 > /sys/module/adv7180/parameters/dbg_input"
+```
+
+Change the number to the input you want to select. 0 corresponds to input 1 and so forth.
+You can check the detected input format with
+
+```
+$ v4l2-ctl -S
+```
+
+## picture adjustment
+
+Here is the interesting part. You can adjust brightness, saturation and so on inside the ADV7280.
+No need to fiddle around with i2c registers. When the driver is loaded the corresponding i2c bus
+is not exposed for reading or writing. Instead everything is handled through the v4l2-ctl utility.
+
+To list the available settings use one of these commands:
+
+```
+$ v4l2-ctl -d <device> -l
+$ v4l2-ctl -d <device> -L
+```
+
+This gives a description of all available settings and also shows the value range for each setting. If you want to change something use this command:
+
+```
+$ v4l2-ctl -d <device> -c <setting>=<value>
+```
