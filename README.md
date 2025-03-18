@@ -3,7 +3,7 @@
 Raspberry pi shiel built around the ADV7280 analog video decoder IC. Connection to raspberry pi over
 MIPI CSI-2 interface. FFC/FPC connector on the shield has the same pinout as the pi camera connector.
 
-<p float="center">
+<p float="left">
   <img src"pic/raspi_with_adv_shield.jpg" width="450" />
 </p>
 
