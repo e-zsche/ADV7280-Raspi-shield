@@ -1,5 +1,6 @@
 hardware/ADV728X_video_capture-backups
 hardware/*.kicad_prl
+hardware/*.pretty
 hardware/ADV728X_video_capture.round-tracks-config
 hardware/bom
 hardware/doc
