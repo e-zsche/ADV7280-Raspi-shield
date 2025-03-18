@@ -15,6 +15,11 @@ config.txt file. This shield is more or less plug'n'play.
 
 The whole circuit design is copied exactly from the ![ADV7280 datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7280.PDF)
 
+<p float="left">
+  <img src="pic/ADV728X_video_capture_PCB_render_front.jpg" width="300" />
+  <img src="pic/ADV728X_video_capture_PCB_render_back.jpg" width="300" />
+</p>
+
 Video inputs are done with BNC connectors. The only reason is that I got these really cheap so I use
 them everywhere. All video inputs are terminated with 75R resistors close to the connector. For
 protection there are BAT54S diodes installed on all used inputs. Because of space constraints only
