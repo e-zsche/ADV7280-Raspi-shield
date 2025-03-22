@@ -13,7 +13,7 @@ config.txt file. This shield is more or less plug'n'play.
 
 # Hardware
 
-The whole circuit design is copied exactly from the ![ADV7280 datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7280.PDF)
+The whole circuit design is copied exactly from the <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7280.PDF">ADV7280 datasheet</a>
 
 <p float="left">
   <img src="pic/ADV728X_video_capture_PCB_render_front.jpg" width="300" />

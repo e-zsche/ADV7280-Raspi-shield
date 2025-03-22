@@ -26,5 +26,5 @@ this happen and there is no response from the chip you can just reboot and every
 
 ## ADV7280 registers
 
-If you want to see the registers and what they do for yourself Analog Devices published the ![hardware reference pdf](https://www.analog.com/media/en/technical-documentation/user-guides/adv7280_7281_7282_7283_ug-637.pdf)
+If you want to see the registers and what they do for yourself Analog Devices published the <a href="https://www.analog.com/media/en/technical-documentation/user-guides/adv7280_7281_7282_7283_ug-637.pdf">hardware reference pdf</a>
 for the ADV7280 (and similiar). Here you will find all registers with description and what they do
